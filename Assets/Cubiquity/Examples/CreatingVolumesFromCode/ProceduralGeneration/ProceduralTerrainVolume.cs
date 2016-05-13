@@ -80,7 +80,7 @@ public class ProceduralTerrainVolume : MonoBehaviour
 					
 					// Subtract the altitude from the noise. This adds
 					// material near the ground and subtracts it higher up.					
-					simplexNoiseValue -= altitude*2.5f;
+					simplexNoiseValue -= altitude*3f;
 					
 					// After combining our noise value and our altitude we now have values between -2.0 and 2.0.
 					// Cubiquity renders anything below the threshold as empty and anythng above as solid, but

@@ -18,15 +18,6 @@ public class createBody : MonoBehaviour {
 	
 	void Update () {
 
-
-        //REMOVE
-        if (!Application.isLoadingLevel)
-            print("done");
-
-
-
-
-
         if (rb == null) {
             if (Physics.Raycast(transform.position, Vector3.down, out hit)){
                 print("Found an object - distance: " + hit.distance + " " + hit.transform);
