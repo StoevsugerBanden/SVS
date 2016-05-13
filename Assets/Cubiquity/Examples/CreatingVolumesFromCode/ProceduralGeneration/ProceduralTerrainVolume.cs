@@ -19,7 +19,7 @@ public class ProceduralTerrainVolume : MonoBehaviour
 	{
 		// The size of the volume we will generate
 		int width = 128;
-		int height = 32;
+		int height = 45;
 		int depth = 128;
 		
 		// FIXME - Where should we delete this?
@@ -80,7 +80,7 @@ public class ProceduralTerrainVolume : MonoBehaviour
 					
 					// Subtract the altitude from the noise. This adds
 					// material near the ground and subtracts it higher up.					
-					simplexNoiseValue -= altitude*3f;
+					simplexNoiseValue -= altitude*4f;
 					
 					// After combining our noise value and our altitude we now have values between -2.0 and 2.0.
 					// Cubiquity renders anything below the threshold as empty and anythng above as solid, but
@@ -124,6 +124,5 @@ public class ProceduralTerrainVolume : MonoBehaviour
 				}
 			}
 		}
-        print("done");
     }
 }

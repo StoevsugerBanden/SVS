@@ -468,6 +468,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 5c03dd4f8f864fa44b6e23405c0cd182, type: 3}
+      propertyPath: m_Name
+      value: Sea star
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c03dd4f8f864fa44b6e23405c0cd182, type: 3}
   m_IsPrefabParent: 0
@@ -619,7 +623,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 384778961}
   m_Layer: 0
-  m_Name: stones
+  m_Name: Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1130,6 +1134,33 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300004, guid: 5c03dd4f8f864fa44b6e23405c0cd182, type: 3}
+--- !u!1 &1017818839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1017818840}
+  m_Layer: 0
+  m_Name: Regular Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1017818840
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017818839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.9, y: 33.2, z: 50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1 &1055068729 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 166354, guid: b989e1d09ec578b418c442d503b37917, type: 2}
