@@ -13,7 +13,7 @@ public class ObjectProperties : MonoBehaviour {
         
         if (GetComponent<Rigidbody>()){
             GetComponent<Rigidbody>().AddForce(c.GetDir());
-            print(gameObject + "is moving towards " + c.GetDir());
+            //print(gameObject + "is moving towards " + c.GetDir());
         }
     }
 }
