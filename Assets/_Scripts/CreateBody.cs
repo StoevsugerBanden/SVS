@@ -4,7 +4,7 @@ using System.Collections;
 public class CreateBody : MonoBehaviour {
 
     Rigidbody rb;
-    RaycastHit hit;
+    //RaycastHit hit;
     float mass, drag;
     ObjectProperties op;
 
@@ -19,8 +19,7 @@ public class CreateBody : MonoBehaviour {
 	void Update () {
 
         if (rb == null) {
-            if (Physics.Raycast(transform.position, Vector3.down, out hit)){
-                //print("Found an object - distance: " + hit.distance + " " + hit.transform);
+            if (Physics.Raycast(transform.position, Vector3.down)) {//, out hit
                 gameObject.AddComponent<Rigidbody>();
                 rb = GetComponent<Rigidbody>();
                 rb.drag = drag;
