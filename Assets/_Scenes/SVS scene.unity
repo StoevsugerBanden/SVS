@@ -14,8 +14,8 @@ SceneSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.50810987, g: 0.5462772, b: 0.9338235, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strLimit: 2.5
   step: 0.02
-  dir: {x: 1, y: 0, z: 0}
+  dir: {x: 0, y: 0, z: 0}
 --- !u!4 &510365277
 Transform:
   m_ObjectHideFlags: 0
@@ -700,14 +700,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34b0146123334f7badd6a913e2b9681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sardinePrefab: {fileID: 147062, guid: d8609e2633de041acb073a9f9f5d6e42, type: 2}
-  maxXNum: 2
-  maxYNum: 3
+  sardinePrefab: {fileID: 191064, guid: 71d5b815a72184293b1c2534d55059ad, type: 2}
+  maxXNum: 3
+  maxYNum: 2
   maxZNum: 4
-  meanPos: {x: 0, y: 0, z: 0}
+  meanPos: {x: 0, y: 20, z: 0}
   sardineCount: 0
   rotateSpeed: 1
-  meanDummy: {fileID: 0}
+  meanDummy: {fileID: 100000, guid: 103612e5e1ff43a4e896c567a2cb3ae1, type: 3}
 --- !u!1001 &555081470
 Prefab:
   m_ObjectHideFlags: 0
@@ -1066,7 +1066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1055712140
 Transform:
   m_ObjectHideFlags: 0
