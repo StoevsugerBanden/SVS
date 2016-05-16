@@ -563,7 +563,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11462248, guid: d8609e2633de041acb073a9f9f5d6e42, type: 2}
       propertyPath: speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8609e2633de041acb073a9f9f5d6e42, type: 2}
@@ -655,6 +655,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 510365277}
   - 114: {fileID: 510365276}
+  - 114: {fileID: 510365278}
   m_Layer: 0
   m_Name: Global
   m_TagString: Global
@@ -688,6 +689,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &510365278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510365275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34b0146123334f7badd6a913e2b9681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sardinePrefab: {fileID: 147062, guid: d8609e2633de041acb073a9f9f5d6e42, type: 2}
+  maxXNum: 2
+  maxYNum: 3
+  maxZNum: 4
+  meanPos: {x: 0, y: 0, z: 0}
+  sardineCount: 0
+  rotateSpeed: 1
+  meanDummy: {fileID: 0}
 --- !u!1001 &555081470
 Prefab:
   m_ObjectHideFlags: 0
