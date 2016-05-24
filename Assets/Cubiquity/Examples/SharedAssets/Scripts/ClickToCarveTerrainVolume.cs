@@ -65,7 +65,7 @@ public class ClickToCarveTerrainVolume : MonoBehaviour
 		}
 	}
 	
-	void DestroyVoxels(int xPos, int yPos, int zPos, int range)
+	public void DestroyVoxels(int xPos, int yPos, int zPos, int range)
 	{
         yPos += (int)(range+1);
 		// Initialise outside the loop, but we'll use it later.
