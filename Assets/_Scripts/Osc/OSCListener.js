@@ -26,18 +26,19 @@ Debug.Log("Running");
 function Update () {
 	//output_txt.text = "Event: " + eventName + " Event data: " + eventData;
 	
-	/*var cube = GameObject.Find("Cube");
+	var cube = GameObject.Find("Cube");
 	var boxWidth:int = posX;
 	var boxHeight:int = posZ;
 	var digStrength:int = area;
     //cube.transform.localScale = Vector3(boxWidth,5,boxHeight);	
 	cube.transform.position = new Vector3(boxHeight,45,boxWidth);
-	cube.GetComponent("trackingCast").SetRange(digStrength);*/
-    
+	cube.GetComponent("trackingCast").SetRange(digStrength);    
+    /*
     var global = GameObject.Find("Global");
     var boxWidth:int = posX;
     var boxHeight:int = posZ;
     var digStrength:int = area;
+    */
 }	
 public function positionData(oscMessage : OscMessage) : void
 {	
