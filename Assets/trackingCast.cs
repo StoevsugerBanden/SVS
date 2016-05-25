@@ -26,4 +26,8 @@ public class trackingCast : MonoBehaviour {
             carve.DestroyVoxels((int)p.x, (int)p.y, (int)p.z,range);
         }
 	}
+
+    void SetRange(int r) {
+        range = r;
+    }
 }

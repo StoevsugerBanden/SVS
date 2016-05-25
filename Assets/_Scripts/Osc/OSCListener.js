@@ -7,8 +7,8 @@ private var eventName : String = "";
 private var eventData : String = "";
 private var posX : int = 0;
 private var posZ : int = 0;
+private var area : int = 0;
 //public var output_txt : UnityEngine.UI.Text;
-
 
 public function Start ()
 {	
@@ -26,17 +26,25 @@ Debug.Log("Running");
 function Update () {
 	//output_txt.text = "Event: " + eventName + " Event data: " + eventData;
 	
-	var cube = GameObject.Find("Cube");
+	/*var cube = GameObject.Find("Cube");
 	var boxWidth:int = posX;
 	var boxHeight:int = posZ;
+	var digStrength:int = area;
     //cube.transform.localScale = Vector3(boxWidth,5,boxHeight);	
 	cube.transform.position = new Vector3(boxHeight,45,boxWidth);
+	cube.GetComponent("trackingCast").SetRange(digStrength);*/
+    
+    var global = GameObject.Find("Global");
+    var boxWidth:int = posX;
+    var boxHeight:int = posZ;
+    var digStrength:int = area;
 }	
 public function positionData(oscMessage : OscMessage) : void
 {	
 	Osc.OscMessageToString(oscMessage);
     posX = oscMessage.Values[0];
     posZ = oscMessage.Values[1];
+    area = oscMessage.Values[2];
     //print(posX +" "+ posZ);
 } 
 
