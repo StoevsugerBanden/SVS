@@ -27,12 +27,12 @@ function Update () {
 	//output_txt.text = "Event: " + eventName + " Event data: " + eventData;
 	
 	var cube = GameObject.Find("Cube");
-	var boxWidth:int = posX;
-	var boxHeight:int = posZ;
-	var digStrength:int = area;
+	var x:int = posX;
+	var z:int = posZ;
+	var str:int = area;
     //cube.transform.localScale = Vector3(boxWidth,5,boxHeight);	
-	cube.transform.position = new Vector3(boxHeight,45,boxWidth);
-	cube.GetComponent("trackingCast").SetRange(digStrength);    
+	cube.transform.position = new Vector3(x,35,z);
+	cube.GetComponent("trackingCast").SetRange(str);    
     /*
     var global = GameObject.Find("Global");
     var boxWidth:int = posX;
