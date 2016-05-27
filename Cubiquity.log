@@ -9995,3 +9995,13 @@
 [02:48:56, Info   ]: Creating empty voxel database as 'C:/Users/RUNEBA~1/AppData/Local/Temp/DefaultCompany/SandVacSim/54F38258.vdb'
 [02:50:00, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
 [02:50:01, Info   ]: Creating empty voxel database as 'C:/Users/RUNEBA~1/AppData/Local/Temp/DefaultCompany/SandVacSim/645BE3C8.vdb'
+[02:55:30, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[02:55:32, Info   ]: Creating voxel database from 'C:/Users/RUNEBA~1/AppData/Local/Temp/DefaultCompany/SandVacSim/645BE3C8.vdb'
+[02:55:34, Info   ]: Creating empty voxel database as 'C:/Users/RUNEBA~1/AppData/Local/Temp/DefaultCompany/SandVacSim/20BF8658.vdb'
+[02:55:38, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[02:55:38, Info   ]: Creating empty voxel database as 'C:/Users/RUNEBA~1/AppData/Local/Temp/DefaultCompany/SandVacSim/2685CA59.vdb'
+[02:58:08, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+********************************************************************************
+*                             Shutting down Cubiquity                          *
+********************************************************************************
+

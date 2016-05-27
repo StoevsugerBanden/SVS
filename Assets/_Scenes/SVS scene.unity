@@ -14,10 +14,10 @@ SceneSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.13200097, g: 0.059688598, b: 0.6764706, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.3529412, g: 0.5254902, b: 0.62352943, a: 1}
@@ -1050,8 +1050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf32570a3a2dc95468007c87f5117420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  differenceLimit: 1
-  angle: 0.8
+  differenceLimit: 4
+  angle: 0.3
   length: 10
   wsDisplace: 8
   finalYDisplace: 3

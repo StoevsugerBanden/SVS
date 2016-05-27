@@ -78,20 +78,23 @@ public class trackingCast : MonoBehaviour {
                 if (biggestD >= differenceLimit){
                     print("Difference: " + biggestD);
                     
-                    //finalY += (int)biggestD*finalYDisplace; //this is supposed to be used instead of the if below. 
+                    //finalY += (int)biggestD*finalYDisplace; //this is supposed to be used instead of the if in the try catch. 
+                }
+
+                //Call the vacuum script
+                try
+                {
+                    if ((float)dists[dists.Count - 1] - (float)dists[0] < differenceLimit)//not very pretty!
+                        carve.DestroyVoxels((int)pickResult.volumeSpacePos.x, finalY, (int)pickResult.volumeSpacePos.z, range);
+                }
+                catch (CubiquityException e)
+                {
+                    print("Cubiquity exception");
+                    //This is cast if we try to call destroyVoxels on a y value that is out of the voxelvolume
                 }
             }
 
-            //Call the vacuum script
-            try
-            {
-                if((float)dists[dists.Count - 1] - (float)dists[0] < differenceLimit)//not very pretty!
-                    carve.DestroyVoxels((int)pickResult.volumeSpacePos.x, finalY, (int)pickResult.volumeSpacePos.z, range);
-            }
-            catch (CubiquityException e) {
-                print("Cubiquity exception");
-                //This is cast if we try to call destroyVoxels on a y value that is out of the voxelvolume
-            }
+
         }
         /* if (Physics.Raycast(transform.position, Vector3.down, out hit)) {
              print("Dig here: " + hit.point);
