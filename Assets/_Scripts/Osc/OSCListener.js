@@ -26,7 +26,7 @@ Debug.Log("Running");
 function Update () {
 	//output_txt.text = "Event: " + eventName + " Event data: " + eventData;
 	
-	var cube = GameObject.Find("Cube");
+	var cube = GameObject.Find("trackingTarget");
 	var x:int = posX;
 	var z:int = posZ;
 	var str:int = area;

@@ -19,7 +19,7 @@ public class ProceduralTerrainVolume : MonoBehaviour
 	{
 		// The size of the volume we will generate
 		int width = 110;
-		int height = 45;
+		int height = 55;
 		int depth = 70;
 		
 		// FIXME - Where should we delete this?
