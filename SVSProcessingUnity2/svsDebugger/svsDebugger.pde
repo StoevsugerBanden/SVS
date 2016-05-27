@@ -5,6 +5,7 @@ OscP5 oscP5;
 NetAddress myBroadcastLocation;
 int x, z, sZ, sX;
 int str = 7000;
+int counter = 0;
 void setup() {
   size(300, 300);
   background(0);
@@ -65,11 +66,22 @@ void draw() {
       z++;
       sendMessage(x, z, str, 0);
     }
+    
+    //Test Multiple
+    if (key == 'd'){
+      if(counter%2 == 1)
+        sendMessage(170,220,str,0);
+      else
+        sendMessage(470,220,str,0);
+      counter++;
+    }
   }
   if (x > 640 || x < 0 )
     x = (int)random(640);
   if (z > 420 || x < 0)
     z = (int)random(420);
+    
+  
 }
 
 void sendMessage(int xx, int zz, int area, int num) {
