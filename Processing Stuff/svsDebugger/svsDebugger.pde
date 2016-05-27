@@ -85,8 +85,11 @@ void draw() {
 }
 
 void sendMessage(int xx, int zz, int area, int num) {
-  float mappedX = map(xx, 0, 640, 4, 90);
-  float mappedZ = map(zz, 0, 480, 60, 10);
+  /*float mappedX = map(xx, 640, 0, 0, 90);
+  float mappedZ = map(zz, 0, 480,60, 10);
+    */
+  float mappedX = map(xx, 640, 0, 10, 85);
+  float mappedZ = map(zz, 0, 480,50, 4);
   float mappedArea = map(area, 500, 16000, 1, 10);//check med blobs
   drawText(mappedX, mappedZ, mappedArea, xx, zz);
 

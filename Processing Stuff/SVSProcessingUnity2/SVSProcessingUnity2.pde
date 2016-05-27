@@ -25,7 +25,7 @@ int blobCount = 0;
 void setup() {
   size(1280, 480);
   blobList = new ArrayList<Blob>();
-  frameRate(20);
+ // frameRate(20);
   oscP5 = new OscP5(this, 12000);
   myBroadcastLocation = new NetAddress("127.0.0.1", 8000);
 
@@ -109,9 +109,11 @@ void draw() {
 }
 
 void sendMessage(int xx, int zz, int area, int num) {
-  float mappedX = map(xx, 640, 0, 4, 90);
-  float mappedZ = map(zz, 0, 480, 60, 10);
+  
+  float mappedX = map(xx, 640, 0, 10, 85);
+  float mappedZ = map(zz, 0, 480,45, 4);
   float mappedArea = map(area, 500, 16000, 1, 10);//check med blobs
+  println(xx, zz, area, mappedX, mappedZ, mappedArea);
   //drawText(mappedX, mappedZ, mappedArea, xx, zz);
 
   OscMessage myOscMessage = new OscMessage("/positionData");
