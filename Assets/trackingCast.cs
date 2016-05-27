@@ -29,7 +29,7 @@ public class trackingCast : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (mm.GetNData ());
+		//print (mm.GetNData ());
 		if (!mm.GetNData ())
 			return;
 		mm.SetNData (false);

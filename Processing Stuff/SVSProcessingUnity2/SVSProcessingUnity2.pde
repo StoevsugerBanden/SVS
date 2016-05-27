@@ -6,7 +6,7 @@ import java.awt.Rectangle;
 //import processing.video.*;
 
 //Osc
-Capture cam;
+Capture cam1, cam2;
 OscP5 oscP5;
 NetAddress myBroadcastLocation;
 
@@ -23,9 +23,9 @@ int blurSize = 4;
 int blobCount = 0;
 
 void setup() {
-  size(1280, 480);
+  size(1280, 960);
   blobList = new ArrayList<Blob>();
- // frameRate(20);
+  // frameRate(20);
   oscP5 = new OscP5(this, 12000);
   myBroadcastLocation = new NetAddress("127.0.0.1", 8000);
 
@@ -38,23 +38,39 @@ void setup() {
     println("Available cameras:");
     printArray(cameras);
 
-    cam = new Capture(this, cameras[1]);
-    cam.start();
+    cam1 = new Capture(this, cameras[1]);
+    cam1.start();
+
+    cam2 = new Capture(this, cameras[89]);
+    cam2.start();
   }  
   //delay(250);
-  opencv = new OpenCV(this, 640, 480);
+  opencv = new OpenCV(this, 1280, 480);
   noStroke();
   smooth();
 }
 
 void draw() {
 
-  if (cam.available() == true) {
-    cam.read();
-
+  if (cam1.available() == true && cam2.available() == true) {
+    cam1.read();
+    cam2.read();
+    
+  
     //image(cam, 0, 0);
-    src = cam;
-    opencv.loadImage(cam);
+    //src = cam1
+
+    PGraphics output = createGraphics(1280, 480, JAVA2D);
+    output.beginDraw();
+    output.image(cam1, 640, 0);
+    output.image(cam2, 0, 0);
+    output.endDraw();
+    image(output, 0, 480);
+
+    //loadPixels();
+    //temp = output.get(); 
+
+    opencv.loadImage(output.get());
     src = opencv.getSnapshot();
 
     opencv.gray();
@@ -75,21 +91,21 @@ void draw() {
     //scale(.5);
     displayBlobs();
     image(src, 0, 0);
-    image(dst, src.width, 0);
+    //image(dst, src.width, 0);
     displayBlobs();
     //    filter(THRESHOLD, .5);
-    
+
     //print(blobList.size());
-    for(int i = 0; i < blobList.size(); i++){
-      if(!blobList.get(i).dead()){
+    for (int i = 0; i < blobList.size(); i++) {
+      if (!blobList.get(i).dead()) {
         //print("im alive");
         Rectangle r = blobList.get(i).getBoundingBox();
-        sendMessage(r.x,r.y,r.width*r.height, i);
+        sendMessage(r.x, r.y, r.width*r.height, blobList.get(i).id);
         //print("squared: " ,r.width*r.height);
       }
     }
-    
-    
+
+
     noFill();
     strokeWeight(3);
 
@@ -108,34 +124,35 @@ void draw() {
   }
 }
 
-void sendMessage(int xx, int zz, int area, int num) {
-  
-  float mappedX = map(xx, 640, 0, 10, 85);
-  float mappedZ = map(zz, 0, 480,45, 4);
+void sendMessage(int xx, int zz, int area, int id) {
+
+  float mappedX = map(xx, 1280, 0, 10, 85);
+  float mappedZ = map(zz, 0, 480, 40, 4);
   float mappedArea = map(area, 500, 16000, 1, 10);//check med blobs
-  println(xx, zz, area, mappedX, mappedZ, mappedArea);
+  //println(xx, zz, area, mappedX, mappedZ, mappedArea);
   //drawText(mappedX, mappedZ, mappedArea, xx, zz);
 
   OscMessage myOscMessage = new OscMessage("/positionData");
   myOscMessage.add(mappedX);
   myOscMessage.add(mappedZ);
   myOscMessage.add(mappedArea);
-  //myOscMessage.add(num);
+  myOscMessage.add(id);
+  print(id);
   oscP5.send(myOscMessage, myBroadcastLocation);
 }
 
 /*void sendMessage(int x, int z, int area, int num) {
-  float mappedX = map(x, 0, 640, 21, 107);
-  float mappedZ = map(z, 0, 480, 83, 44);
-  float mappedArea = map(area, 500, 16000,1,10);
-  
-  OscMessage myOscMessage = new OscMessage("/positionData");
-  myOscMessage.add(mappedX);
-  myOscMessage.add(mappedZ);
-  myOscMessage.add(mappedArea);
-  //myOscMessage.add(num);
-  oscP5.send(myOscMessage, myBroadcastLocation);
-}*/
+ float mappedX = map(x, 0, 640, 21, 107);
+ float mappedZ = map(z, 0, 480, 83, 44);
+ float mappedArea = map(area, 500, 16000,1,10);
+ 
+ OscMessage myOscMessage = new OscMessage("/positionData");
+ myOscMessage.add(mappedX);
+ myOscMessage.add(mappedZ);
+ myOscMessage.add(mappedArea);
+ //myOscMessage.add(num);
+ oscP5.send(myOscMessage, myBroadcastLocation);
+ }*/
 
 void displayContoursBoundingBoxes() {
 

@@ -1,76 +1,42 @@
 ********************************************************************************
 *                             Initializing Cubiquity                           *
 ********************************************************************************
-[11:20:44, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/3CE51439.vdb'
-[11:21:34, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:21:35, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/59658FF7.vdb'
-[11:22:15, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:22:15, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/769D613B.vdb'
-[11:22:20, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:22:21, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/15C02775.vdb'
-[11:23:54, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:23:55, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/4911A429.vdb'
-[11:23:56, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:23:57, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/4ECEE7F9.vdb'
-[11:26:04, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:26:04, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/6EE749FE.vdb'
-[11:28:54, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:28:56, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/0B763BF2.vdb'
-[11:29:11, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:29:11, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/4E386875.vdb'
-[11:37:12, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:37:13, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/06CFF8AA.vdb'
-[11:44:50, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:44:50, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/13E0EEB4.vdb'
-[11:56:53, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[11:56:54, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/13E0EEB4.vdb'
-[12:00:13, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/13E0EEB4.vdb'
-[12:00:51, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/13E0EEB4.vdb'
-[12:04:02, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/13E0EEB4.vdb'
-[12:05:59, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/13E0EEB4.vdb'
-[12:06:02, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/4E4355B1.vdb'
-[12:07:59, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:07:59, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/6083759D.vdb'
-[12:08:01, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:08:02, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/6083759D.vdb'
-[12:08:05, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/21881F5B.vdb'
-[12:09:28, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:09:28, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/30939F23.vdb'
-[12:10:44, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:10:45, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/30939F23.vdb'
-[12:10:47, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/1A95B4E7.vdb'
-[12:11:52, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:11:53, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/1A95B4E7.vdb'
-[12:11:54, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/48FBF9E1.vdb'
-[12:11:55, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:11:56, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/40F8F327.vdb'
-[12:16:42, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:16:42, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5F4CA7E5.vdb'
-[12:16:43, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:16:44, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/02C4C958.vdb'
-[12:17:34, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:17:35, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/1E89CA17.vdb'
-[12:28:02, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:28:03, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/319275CA.vdb'
-[12:28:05, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:28:05, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/690A786C.vdb'
-[12:28:08, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:28:09, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/3C51B677.vdb'
-[12:35:26, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:35:26, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/47A40A5D.vdb'
-[12:50:39, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:50:40, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/6F3F3168.vdb'
-[12:54:01, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:54:01, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5558DE92.vdb'
-[12:54:23, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:54:24, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5558DE92.vdb'
-[12:56:35, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5472AE14.vdb'
-[12:56:39, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[12:56:40, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5472AE14.vdb'
-[13:01:59, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5BFCCA96.vdb'
-[13:02:03, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[13:02:04, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5BFCCA96.vdb'
-[13:31:48, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5AAEA9F5.vdb'
-[13:31:52, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
-[13:31:52, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/5B918884.vdb'
-[13:41:57, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:12:48, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/785FEADF.vdb'
+[16:32:37, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:32:38, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/785FEADF.vdb'
+[16:33:04, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/6BFBAB71.vdb'
+[16:33:22, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:33:22, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/1A6231FE.vdb'
+[16:34:26, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:34:27, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/3738F97E.vdb'
+[16:35:58, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:35:58, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/19EAF791.vdb'
+[16:37:42, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:37:43, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/3FC41001.vdb'
+[16:38:00, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:38:01, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/3FC41001.vdb'
+[16:38:10, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/76A166AB.vdb'
+[16:38:18, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:38:19, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/73F29DB6.vdb'
+[16:40:59, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:41:00, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/73F29DB6.vdb'
+[16:44:54, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/73F29DB6.vdb'
+[16:44:56, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/0A340574.vdb'
+[16:45:16, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:45:17, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/344DD17E.vdb'
+[16:46:40, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:46:41, Info   ]: Creating voxel database from 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/344DD17E.vdb'
+[16:46:43, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/38583EA1.vdb'
+[16:46:46, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:46:47, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/4DE48903.vdb'
+[16:47:37, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:47:38, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/60BBAFBB.vdb'
+[16:47:49, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:47:50, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/787B49C9.vdb'
+[16:48:38, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[16:48:38, Info   ]: Creating empty voxel database as 'C:/Users/VSM/AppData/Local/Temp/DefaultCompany/SandVacSim/2AC47224.vdb'
+[16:48:53, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+********************************************************************************
+*                             Shutting down Cubiquity                          *
+********************************************************************************
+

@@ -4,15 +4,22 @@ private var broadcastPort : int = 57131;
 private var oscHandler : Osc;
 private var mm : middleMan;
 
+
+private 
 private var eventName : String = "";
 private var eventData : String = "";
 private var posX : int = 0;
 private var posZ : int = 0;
 private var area : int = 0;
+private var messages;
+private var temp;
 //public var output_txt : UnityEngine.UI.Text;
 
 public function Start ()
 {	
+	messages = new Array();
+	temp = new Array();
+
 	var udp : UDPPacketIO = GetComponent("UDPPacketIO");
 	mm = GameObject.FindGameObjectWithTag("Global").GetComponent("middleMan");
 	udp.init(UDPHost, broadcastPort, listenerPort);
@@ -26,8 +33,7 @@ public function Start ()
 Debug.Log("Running");
 
 function Update () {
-	//output_txt.text = "Event: " + eventName + " Event data: " + eventData;
-
+/*
 	var cube = GameObject.Find("trackingTarget");
 	var x:int = posX;
 	var z:int = posZ;
@@ -35,12 +41,20 @@ function Update () {
     //cube.transform.localScale = Vector3(boxWidth,5,boxHeight);	
 	cube.transform.position = new Vector3(x,35,z);
 	cube.GetComponent("trackingCast").SetRange(str);    
-    /*
-    var global = GameObject.Find("Global");
-    var boxWidth:int = posX;
-    var boxHeight:int = posZ;
-    var digStrength:int = area;
-    */
+*/
+	if(messages.length > 0){
+		temp = messages.pop();
+		var cube = GameObject.Find("trackingTarget");
+		var x:int = temp.mPosX;
+		var z:int = temp.mPosZ;
+		var str:int = temp.mArea;
+		var id:int = temp.mId;
+
+    	//cube.transform.localScale = Vector3(boxWidth,5,boxHeight);	
+		cube.transform.position = new Vector3(x,35,z);
+		print("ID: "+id);
+		cube.GetComponent("trackingCast").SetRange(str); 
+	}
 }	
 public function positionData(oscMessage : OscMessage) : void
 {	
@@ -50,8 +64,26 @@ public function positionData(oscMessage : OscMessage) : void
     posX = oscMessage.Values[0];
     posZ = oscMessage.Values[1];
     area = oscMessage.Values[2];
+    id = oscMessage.Values[3];
+
+    var mes = new m(posX, posZ, area, id);
+    messages.push(mes);
     //print(posX +" "+ posZ);
 } 
+
+class m{
+ var mPosX : int;
+ var mPosZ : int;
+ var mArea : int;
+ var mId : int;
+
+ function m(mPosX : int, mPosZ : int, mArea : int, mId : int){
+ 	this.mPosX = mPosX;
+ 	this.mPosZ = mPosZ;
+ 	this.mId = mId;
+ 	this.mArea = mArea;
+ }
+}
 
 /*public function updateText(oscMessage : OscMessage) : void
 {	
