@@ -6,6 +6,7 @@ public class trackingCast : MonoBehaviour {
     RaycastHit hitInf;
     GameObject terrain;
     ClickToCarveTerrainVolume carve;
+	middleMan mm;
     private TerrainVolume terrainVolume;
     int finalY;
 
@@ -20,6 +21,7 @@ public class trackingCast : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         terrain = GameObject.FindGameObjectWithTag("ProTerrain");
+		mm = GameObject.FindGameObjectWithTag("Global").GetComponent<middleMan>();
         carve = terrain.GetComponent<ClickToCarveTerrainVolume>();
         terrainVolume = terrain.GetComponent<TerrainVolume>();
         range = carve.range;
@@ -27,7 +29,10 @@ public class trackingCast : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		print (mm.GetNData ());
+		if (!mm.GetNData ())
+			return;
+		mm.SetNData (false);
         Vector2 mousePos = Input.mousePosition;
         Ray ray = new Ray(transform.position, Vector3.down);
         PickSurfaceResult pickResult;

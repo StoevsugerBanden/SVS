@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Global
   - ProTerrain
+  - Fire
+  - trackingTarget
   layers:
   - Default
   - TransparentFX

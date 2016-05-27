@@ -25,7 +25,7 @@ int blobCount = 0;
 void setup() {
   size(1280, 480);
   blobList = new ArrayList<Blob>();
-  //frameRate(20);
+  frameRate(20);
   oscP5 = new OscP5(this, 12000);
   myBroadcastLocation = new NetAddress("127.0.0.1", 8000);
 
@@ -81,11 +81,12 @@ void draw() {
     
     //print(blobList.size());
     for(int i = 0; i < blobList.size(); i++){
-      if(!blobList.get(i).dead())
-        print("im alive");
+      if(!blobList.get(i).dead()){
+        //print("im alive");
         Rectangle r = blobList.get(i).getBoundingBox();
         sendMessage(r.x,r.y,r.width*r.height, i);
-        print("squared: " ,r.width*r.height);
+        //print("squared: " ,r.width*r.height);
+      }
     }
     
     
@@ -107,7 +108,21 @@ void draw() {
   }
 }
 
-void sendMessage(int x, int z, int area, int num) {
+void sendMessage(int xx, int zz, int area, int num) {
+  float mappedX = map(xx, 640, 0, 4, 90);
+  float mappedZ = map(zz, 0, 480, 60, 10);
+  float mappedArea = map(area, 500, 16000, 1, 10);//check med blobs
+  //drawText(mappedX, mappedZ, mappedArea, xx, zz);
+
+  OscMessage myOscMessage = new OscMessage("/positionData");
+  myOscMessage.add(mappedX);
+  myOscMessage.add(mappedZ);
+  myOscMessage.add(mappedArea);
+  //myOscMessage.add(num);
+  oscP5.send(myOscMessage, myBroadcastLocation);
+}
+
+/*void sendMessage(int x, int z, int area, int num) {
   float mappedX = map(x, 0, 640, 21, 107);
   float mappedZ = map(z, 0, 480, 83, 44);
   float mappedArea = map(area, 500, 16000,1,10);
@@ -118,7 +133,7 @@ void sendMessage(int x, int z, int area, int num) {
   myOscMessage.add(mappedArea);
   //myOscMessage.add(num);
   oscP5.send(myOscMessage, myBroadcastLocation);
-}
+}*/
 
 void displayContoursBoundingBoxes() {
 

@@ -2,6 +2,7 @@ private var UDPHost : String = "127.0.0.1";
 private var listenerPort : int = 8000;
 private var broadcastPort : int = 57131;
 private var oscHandler : Osc;
+private var mm : middleMan;
 
 private var eventName : String = "";
 private var eventData : String = "";
@@ -13,6 +14,7 @@ private var area : int = 0;
 public function Start ()
 {	
 	var udp : UDPPacketIO = GetComponent("UDPPacketIO");
+	mm = GameObject.FindGameObjectWithTag("Global").GetComponent("middleMan");
 	udp.init(UDPHost, broadcastPort, listenerPort);
 	oscHandler = GetComponent("Osc");
 	oscHandler.init(udp);
@@ -25,7 +27,7 @@ Debug.Log("Running");
 
 function Update () {
 	//output_txt.text = "Event: " + eventName + " Event data: " + eventData;
-	
+
 	var cube = GameObject.Find("trackingTarget");
 	var x:int = posX;
 	var z:int = posZ;
@@ -42,6 +44,8 @@ function Update () {
 }	
 public function positionData(oscMessage : OscMessage) : void
 {	
+	mm.SetNData(true);
+	print("sendimg true");
 	Osc.OscMessageToString(oscMessage);
     posX = oscMessage.Values[0];
     posZ = oscMessage.Values[1];

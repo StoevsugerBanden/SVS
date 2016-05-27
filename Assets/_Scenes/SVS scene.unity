@@ -660,6 +660,7 @@ GameObject:
   - 114: {fileID: 510365280}
   - 114: {fileID: 510365279}
   - 114: {fileID: 510365282}
+  - 114: {fileID: 510365283}
   m_Layer: 0
   m_Name: Global
   m_TagString: Global
@@ -754,6 +755,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e777222e0f8438438e917a111c649fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &510365283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510365275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c535a44df0a06cc4ea0c07af9a4d4fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &555081470
@@ -977,7 +989,7 @@ GameObject:
   - 114: {fileID: 881761245}
   m_Layer: 2
   m_Name: trackingTarget
-  m_TagString: Untagged
+  m_TagString: trackingTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
