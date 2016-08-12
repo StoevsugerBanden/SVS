@@ -20,7 +20,7 @@ public class CreateBody : MonoBehaviour {
 
         if (rb == null) {
             if (Physics.Raycast(transform.position, Vector3.down, out hit)) {//
-                print(hit.distance);
+                //print(hit.distance);
                 if (hit.distance > 0.2f)
                 {
                     gameObject.AddComponent<Rigidbody>();

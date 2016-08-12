@@ -42,7 +42,8 @@ public class ClickToCarveTerrainVolume : MonoBehaviour
 			{
 				// Build a ray based on the current mouse position
 				Vector2 mousePos = Input.mousePosition;
-				Ray ray = Camera.main.ScreenPointToRay(new Vector3(mousePos.x, mousePos.y, 0));				
+				Ray ray = Camera.main.ScreenPointToRay(new Vector3(mousePos.x, mousePos.y, 0));
+                //print(mousePos + "" + Screen.width);				
 				
 				// Perform the raycasting.
 				PickSurfaceResult pickResult;
@@ -105,4 +106,42 @@ public class ClickToCarveTerrainVolume : MonoBehaviour
 		//TerrainVolumeEditor.BlurTerrainVolume(terrainVolume, new Region(xPos - range, yPos - range, zPos - range, xPos + range, yPos + range, zPos + range));
 		//TerrainVolumeEditor.BlurTerrainVolume(terrainVolume, new Region(xPos - range, yPos - range, zPos - range, xPos + range, yPos + range, zPos + range));
 	}
+
+    public void DestroyVoxels2(int xPos, int yPos, int zPos, int range)
+    {
+        yPos += (int)(range + 1);
+        int rangeSquared = range * range;
+        MaterialSet emptyMaterialSet = new MaterialSet();
+        //Iterer over alle givne voxels, defineret af en range fra start positionen. Altså ikke alle voxels bliver
+        //gennegået, men kun en "kasse" der bliver definere med range parametret. 
+        for (int z = zPos - range; z < zPos + range; z++)
+        {
+            for (int y = yPos - range; y < yPos + range; y++)
+            {
+                for (int x = xPos - range; x < xPos + range; x++)
+                {
+                    //Find distancen fra den nuværende voxel til centrum
+                    int xDistance = x - xPos;
+                    int yDistance = y - yPos;
+                    int zDistance = z - zPos;
+
+                    // for at undgå dyre kvadratrodsudregninger kvadreteres distancerne. 
+                    int distSquared = xDistance * xDistance + yDistance * yDistance + zDistance * zDistance;
+
+                    //For at udviske voxels i en sphere i stedet for et kvadrat, tjekkes distancen fra den enkelte voxel til centrum, og hvis denne 
+//er kortere end en radius defineret af range, udviskes disse. 
+                    if (distSquared < rangeSquared)
+                    {
+                        terrainVolume.data.SetVoxel(x, y, z, emptyMaterialSet);
+                    }
+                }
+            }
+        }
+
+        range += 2;
+
+        TerrainVolumeEditor.BlurTerrainVolume(terrainVolume, new Region(xPos - range, yPos - range, zPos - range, xPos + range, yPos + range, zPos + range));
+        //TerrainVolumeEditor.BlurTerrainVolume(terrainVolume, new Region(xPos - range, yPos - range, zPos - range, xPos + range, yPos + range, zPos + range));
+        //TerrainVolumeEditor.BlurTerrainVolume(terrainVolume, new Region(xPos - range, yPos - range, zPos - range, xPos + range, yPos + range, zPos + range));
+    }
 }

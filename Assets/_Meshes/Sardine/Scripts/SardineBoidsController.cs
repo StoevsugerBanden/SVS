@@ -30,7 +30,8 @@ public class SardineBoidsController : MonoBehaviour {
 	}
 
 	void Update () {
-        meanPos = Vector3.zero;
+        //meanPos = Vector3.zero;
+        meanPos = new Vector3(10,0,0);
 		for (int i=0; i<sardineCount; i++) {
 			meanPos=meanPos+sardines[i].transform.position;
 
